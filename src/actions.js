@@ -5,7 +5,6 @@ export function buttonClick() {
 }
 
 export function checkboxChanged(checked) {
-	console.log("HI: "+checked)
 	return {type:'CHECKBOX_CHANGED',
 	        checked: checked
 	}

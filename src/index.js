@@ -11,7 +11,7 @@ function rootReducer(state = {clickCounter:0}, action) {
     case 'BUTTON_CLICK':
       return Object.assign({}, state, {clickCounter:state.clickCounter+1});
     case 'CHECKBOX_CHANGED':
-      return Object.assign({}, state, {checkboxChecked: action.checkboxValue})
+      return Object.assign({}, state, {checkboxChecked: action.checked})
     default:
       return state;
   }
@@ -20,7 +20,7 @@ const store = createStore(rootReducer)
 
 const App = ()=>(
   <div>
-    <h1>Zzzzzzzzzzzzzooooooo</h1>
+    <h1>Form Zoo</h1>
     <Button />
     <Checkbox />
   </div>

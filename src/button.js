@@ -5,7 +5,11 @@ import { buttonClick } from './actions'
 //--noncontainer to go inside container
 
 const ButtonComponent = ({buttonClick, clickCounter})=>(
-  <button onClick={buttonClick}>Click Me! {clickCounter}</button>
+  <div>
+    <button onClick={buttonClick}>
+      Click Me! {clickCounter}
+    </button>
+   </div>
 )
 
 //--container--
