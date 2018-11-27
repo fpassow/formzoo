@@ -27,3 +27,15 @@ export function multiselectChanged(selections) {
 	        selections: selections
 	}
 }
+
+export function textinputChanged(text) {
+	return {type:'TEXTINPUT_CHANGED',
+	        text: text
+	}
+}
+
+export function textareaChanged(text) {
+	return {type:'TEXTAREA_CHANGED',
+	        text: text
+	}
+}

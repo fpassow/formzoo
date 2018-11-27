@@ -8,13 +8,16 @@ import Checkbox from './checkbox'
 import Radiogroup from './radiogroup'
 import Select from './select'
 import Multiselect from './multiselect'
+import Textinput from './textinput'
 
 const state0 = {
 	clickCounter: 0,
 	checkboxChecked: false,
 	radiogroupValue: 'this',
 	selectValue: 'here',
-	multiselectSelections: []
+	multiselectSelections: [],
+	textinputText: '',
+	textareaText:''
 }
 function rootReducer(state = state0, action) {
   switch (action.type) {
@@ -28,6 +31,10 @@ function rootReducer(state = state0, action) {
       return Object.assign({}, state, {selectValue: action.value})
     case 'MULTISELECT_CHANGED':
       return Object.assign({}, state, {multiselectSelections: action.selections})
+    case 'TEXTINPUT_CHANGED':
+      return Object.assign({}, state, {textinputText: action.text})
+    case 'TEXTAREA_CHANGED':
+      return Object.assign({}, state, {textareaText: action.text})
     default:
       return state;
   }
@@ -42,11 +49,10 @@ const App = ()=>(
     <Radiogroup />
     <Select />
     <Multiselect />
-    <div>TextInput</div>
-    <div>TextArea</div>
+    <Textinput />
+    <div>Textarea</div>
   </div>
 )
-
 
 render(
   <Provider store={store}>
