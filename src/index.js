@@ -9,6 +9,7 @@ import Radiogroup from './radiogroup'
 import Select from './select'
 import Multiselect from './multiselect'
 import Textinput from './textinput'
+import Textarea from './textarea'
 
 const state0 = {
 	clickCounter: 0,
@@ -17,7 +18,7 @@ const state0 = {
 	selectValue: 'here',
 	multiselectSelections: [],
 	textinputText: '',
-	textareaText:''
+	textareaText:' '
 }
 function rootReducer(state = state0, action) {
   switch (action.type) {
@@ -50,7 +51,7 @@ const App = ()=>(
     <Select />
     <Multiselect />
     <Textinput />
-    <div>Textarea</div>
+    <Textarea />
   </div>
 )
 
