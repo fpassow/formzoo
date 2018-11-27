@@ -44,7 +44,7 @@ const store = createStore(rootReducer)
 
 const App = ()=>(
   <div>
-    <h1>Form Zoo</h1>
+    <h1>React-Redux Form Zoo</h1>
     <Button />
     <Checkbox />
     <Radiogroup />
